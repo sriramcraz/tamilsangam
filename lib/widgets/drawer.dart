@@ -65,7 +65,7 @@ class ArgonDrawer extends StatelessWidget {
             padding: EdgeInsets.only(top: 0, left: 16, right: 16),
             children: [
               DrawerTile(
-                  icon: Icons.home,
+                  icon: Icons.home_outlined,
                   onTap: () {
                     if (currentPage != "Home")
                       Navigator.pushReplacementNamed(context, '/home');
@@ -76,20 +76,20 @@ class ArgonDrawer extends StatelessWidget {
               Divider(
                 height: 0.7,
               ),
+              // DrawerTile(
+              //     icon: Icons.pie_chart,
+              //     onTap: () {
+              //       if (currentPage != "Profile")
+              //         Navigator.pushReplacementNamed(context, '/profile');
+              //     },
+              //     iconColor: ArgonColors.warning,
+              //     title: "Profile",
+              //     isSelected: currentPage == "Profile" ? true : false),
+              // Divider(
+              //   height: 0.7,
+              // ),
               DrawerTile(
-                  icon: Icons.pie_chart,
-                  onTap: () {
-                    if (currentPage != "Profile")
-                      Navigator.pushReplacementNamed(context, '/profile');
-                  },
-                  iconColor: ArgonColors.warning,
-                  title: "Profile",
-                  isSelected: currentPage == "Profile" ? true : false),
-              Divider(
-                height: 0.7,
-              ),
-              DrawerTile(
-                  icon: Icons.apps,
+                  icon: Icons.group_outlined,
                   onTap: () {
                     if (currentPage != "commitee")
                       Navigator.pushReplacementNamed(context, '/commitee');
@@ -101,7 +101,7 @@ class ArgonDrawer extends StatelessWidget {
                 height: 0.7,
               ),
               DrawerTile(
-                  icon: Icons.apps,
+                  icon: Icons.event_available,
                   onTap: () {
                     if (currentPage != "events")
                       Navigator.pushReplacementNamed(context, '/events');
@@ -113,7 +113,7 @@ class ArgonDrawer extends StatelessWidget {
                 height: 0.7,
               ),
               DrawerTile(
-                  icon: Icons.apps,
+                  icon: Icons.card_membership,
                   onTap: () {
                     if (currentPage != "membership")
                       // Navigator.pushReplacementNamed(context, '/membership');
@@ -130,7 +130,7 @@ class ArgonDrawer extends StatelessWidget {
               ),
 
               DrawerTile(
-                  icon: Icons.apps,
+                  icon: Icons.monochrome_photos,
                   onTap: () {
                     if (currentPage != "gallery")
                       Navigator.pushReplacementNamed(context, '/gallery');
@@ -142,7 +142,7 @@ class ArgonDrawer extends StatelessWidget {
                 height: 0.7,
               ),
               DrawerTile(
-                  icon: Icons.apps,
+                  icon: Icons.info_outline,
                   onTap: () {
                     if (currentPage != "aboutus")
                       Navigator.pushReplacementNamed(context, '/aboutus');
@@ -154,7 +154,7 @@ class ArgonDrawer extends StatelessWidget {
                 height: 0.7,
               ),
               DrawerTile(
-                  icon: Icons.apps,
+                  icon: Icons.quick_contacts_dialer_outlined,
                   onTap: () {
                     if (currentPage != "contactus")
                       Navigator.pushReplacementNamed(context, '/contactus');

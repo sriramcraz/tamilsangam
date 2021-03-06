@@ -56,7 +56,7 @@ class _CommiteeState extends State<Commitee> {
           Container(
             width: MediaQuery.of(context).size.width,
             child: Card(
-              color: Colors.redAccent,
+              color: ArgonColors.primary,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(20.0))),
@@ -66,7 +66,7 @@ class _CommiteeState extends State<Commitee> {
                 child: Text("20",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: ArgonColors.white,
                         fontSize: 72)),
               ),
             ),
@@ -76,7 +76,7 @@ class _CommiteeState extends State<Commitee> {
             child: Container(
               width: MediaQuery.of(context).size.width / 5,
               child: Card(
-                color: Colors.black,
+                color: ArgonColors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
@@ -87,7 +87,7 @@ class _CommiteeState extends State<Commitee> {
                   child: Text("$king",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: ArgonColors.black,
                           fontSize: 40)),
                 ),
               ),

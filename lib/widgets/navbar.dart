@@ -106,7 +106,7 @@ class _NavbarState extends State<Navbar> {
                                         ? ArgonColors.initial
                                         : ArgonColors.white)
                                     : ArgonColors.white,
-                                size: 24.0),
+                                size: 33.0),
                             onPressed: () {
                               if (!widget.backButton)
                                 Scaffold.of(context).openDrawer();
@@ -121,39 +121,39 @@ class _NavbarState extends State<Navbar> {
                                         : ArgonColors.white)
                                     : ArgonColors.white,
                                 fontWeight: FontWeight.w600,
-                                fontSize: 18.0)),
+                                fontSize: 22.0)),
                       ],
                     ),
                     if (widget.rightOptions)
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
+                          // GestureDetector(
+                          //   onTap: () {
+                          //     Navigator.pushNamed(context, '/home');
+                          //   },
+                          //   child: IconButton(
+                          //       icon: Icon(Icons.notifications_active,
+                          //           color: !widget.transparent
+                          //               ? (widget.bgColor == ArgonColors.white
+                          //                   ? ArgonColors.initial
+                          //                   : ArgonColors.white)
+                          //               : ArgonColors.white,
+                          //           size: 22.0),
+                          //       onPressed: null),
+                          // ),
                           GestureDetector(
                             onTap: () {
-                              Navigator.pushNamed(context, '/home');
+                              Navigator.pushNamed(context, '/');
                             },
                             child: IconButton(
-                                icon: Icon(Icons.notifications_active,
+                                icon: Icon(Icons.login_sharp,
                                     color: !widget.transparent
                                         ? (widget.bgColor == ArgonColors.white
                                             ? ArgonColors.initial
                                             : ArgonColors.white)
                                         : ArgonColors.white,
-                                    size: 22.0),
-                                onPressed: null),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.pushNamed(context, '/home');
-                            },
-                            child: IconButton(
-                                icon: Icon(Icons.shopping_basket,
-                                    color: !widget.transparent
-                                        ? (widget.bgColor == ArgonColors.white
-                                            ? ArgonColors.initial
-                                            : ArgonColors.white)
-                                        : ArgonColors.white,
-                                    size: 22.0),
+                                    size: 33.0),
                                 onPressed: null),
                           ),
                         ],
