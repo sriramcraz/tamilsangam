@@ -23,17 +23,22 @@ class _ContactusState extends State<Contactus> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: Navbar(transparent: true, title: ""),
-        extendBodyBehindAppBar: true,
+        // appBar: Navbar(transparent: true, title: ""),
+        // extendBodyBehindAppBar: true,
+        appBar: Navbar(
+          title: "Contact Us",
+          rightOptions: true,
+        ),
+        backgroundColor: ArgonColors.bgColorScreen,
         drawer: ArgonDrawer(currentPage: "contactus"),
         body: Stack(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/img/register-bg.png"),
-                      fit: BoxFit.cover)),
-            ),
+            // Container(
+            //   decoration: BoxDecoration(
+            //       image: DecorationImage(
+            //           image: AssetImage("assets/img/register-bg.png"),
+            //           fit: BoxFit.cover)),
+            // ),
             SafeArea(
               child: ListView(children: [
                 Padding(
@@ -65,8 +70,9 @@ class _ContactusState extends State<Contactus> {
                                         child: Center(
                                           child: Text("Contact with us",
                                               style: TextStyle(
-                                                  color: ArgonColors.text,
-                                                  fontWeight: FontWeight.w200,
+                                                  // color: ArgonColors.t ext,
+                                                  color: ArgonColors.black,
+                                                  fontWeight: FontWeight.w500,
                                                   fontSize: 16)),
                                         ),
                                       ),
@@ -78,27 +84,39 @@ class _ContactusState extends State<Contactus> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Input(
                                               placeholder: "Name",
-                                              prefixIcon: Icon(Icons.school),
+                                              prefixIcon: Icon(
+                                                Icons.school,
+                                                color: ArgonColors.black,
+                                              ),
                                             ),
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Input(
                                                 placeholder: "Email",
-                                                prefixIcon: Icon(Icons.email)),
+                                                prefixIcon: Icon(
+                                                  Icons.email,
+                                                  color: ArgonColors.black,
+                                                )),
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Input(
                                               placeholder: "Subject",
-                                              prefixIcon: Icon(Icons.school),
+                                              prefixIcon: Icon(
+                                                Icons.school,
+                                                color: ArgonColors.black,
+                                              ),
                                             ),
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Input(
                                               placeholder: "Message",
-                                              prefixIcon: Icon(Icons.school),
+                                              prefixIcon: Icon(
+                                                Icons.school,
+                                                color: ArgonColors.black,
+                                              ),
                                             ),
                                           ),
                                         ],
