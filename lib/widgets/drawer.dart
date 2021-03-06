@@ -1,3 +1,4 @@
+import 'package:TamilSangam/screens/membershipPage.dart';
 import 'package:TamilSangam/screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -87,7 +88,11 @@ class ArgonDrawer extends StatelessWidget {
                   icon: Icons.apps,
                   onTap: () {
                     if (currentPage != "membership")
-                      Navigator.pushReplacementNamed(context, '/membership');
+                      // Navigator.pushReplacementNamed(context, '/membership');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Membership()));
                   },
                   iconColor: ArgonColors.primary,
                   title: "MemberShip Benifits",
