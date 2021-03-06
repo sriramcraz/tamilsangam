@@ -12,7 +12,7 @@ class Events extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Navbar(
-        title: "Events us Page",
+        title: "Events",
         // searchBar: true,
         // categoryOne: "Beauty",
         // categoryTwo: "Fashion",

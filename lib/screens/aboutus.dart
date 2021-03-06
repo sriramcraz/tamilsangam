@@ -12,7 +12,7 @@ class Aboutus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Navbar(
-        title: "About us Page",
+        title: "About Us",
         // searchBar: true,
         // categoryOne: "Beauty",
         // categoryTwo: "Fashion",
