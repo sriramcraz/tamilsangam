@@ -29,14 +29,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: _buildDarkTheme(),
         title: 'Tamil sangam Flutter',
-        theme: ThemeData(fontFamily: 'OpenSans'),
-        // initialRoute: "/onboarding",
-        initialRoute: "/login",
+        initialRoute: "/",
         debugShowCheckedModeBanner: false,
         routes: <String, WidgetBuilder>{
           "/onboarding": (BuildContext context) => new Onboarding(),
-          "/login": (BuildContext context) => new Login(),
+          "/": (BuildContext context) => new Login(),
           "/home": (BuildContext context) => new Home(),
           "/commitee": (BuildContext context) => new Commitee(),
           "/commiteeList": (BuildContext context) => new CommiteeList(),
@@ -51,5 +50,22 @@ class MyApp extends StatelessWidget {
           "/account": (BuildContext context) => new Register(),
           "/pro": (BuildContext context) => new Pro(),
         });
+  }
+
+  ThemeData _buildDarkTheme() {
+    final baseTheme = ThemeData(
+      fontFamily: "OpenSans",
+    );
+    return baseTheme.copyWith(
+      brightness: Brightness.dark,
+      // primaryColor: Color(0xFF143642),
+      primaryColor: Color(0xFFE91E63),
+      primaryColorLight: Color(0xFF26667d),
+      // primaryColorLight: Color(0xFFE91E63),
+      // primaryColorDark: Color(0xFF08161b),
+      primaryColorDark: Color(0xFFE91E63),
+      primaryColorBrightness: Brightness.dark,
+      accentColor: Colors.white,
+    );
   }
 }

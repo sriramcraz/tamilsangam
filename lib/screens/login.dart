@@ -18,27 +18,25 @@ TextEditingController _newPasswordController = TextEditingController();
 
 class Login extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: _buildDarkTheme(),
-        home: Scaffold(
-          resizeToAvoidBottomPadding: true,
-          body: new Builder(
-              builder: (context) => new Container(
-                    decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [
-                          Theme.of(context).primaryColor,
-                          Theme.of(context).primaryColorLight
-                        ])),
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 40.0),
-                      //Sets the main padding all widgets has to adhere to.
-                      child: LogInPage(),
-                    ),
-                  )),
-        ));
+    return Scaffold(
+      resizeToAvoidBottomPadding: true,
+      body: new Builder(
+          builder: (context) => new Container(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                      Theme.of(context).primaryColor,
+                      Theme.of(context).primaryColorLight
+                    ])),
+                child: Padding(
+                  padding: EdgeInsets.only(top: 40.0),
+                  //Sets the main padding all widgets has to adhere to.
+                  child: LogInPage(),
+                ),
+              )),
+    );
   }
 }
 
@@ -426,26 +424,8 @@ class Model {
   }
 
   static Future _navigateToProfile(context) async {
-    await Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Home()));
+    await Navigator.pushReplacementNamed(context, '/home');
   }
-}
-
-ThemeData _buildDarkTheme() {
-  final baseTheme = ThemeData(
-    fontFamily: "Open Sans",
-  );
-  return baseTheme.copyWith(
-    brightness: Brightness.dark,
-    // primaryColor: Color(0xFF143642),
-    primaryColor: Color(0xFFE91E63),
-    primaryColorLight: Color(0xFF26667d),
-    // primaryColorLight: Color(0xFFE91E63),
-    // primaryColorDark: Color(0xFF08161b),
-    primaryColorDark: Color(0xFFE91E63),
-    primaryColorBrightness: Brightness.dark,
-    accentColor: Colors.white,
-  );
 }
 
 class CustomTextStyle {
