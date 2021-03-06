@@ -27,26 +27,42 @@ class ArgonDrawer extends StatelessWidget {
         child: Container(
       color: ArgonColors.white,
       child: Column(children: [
-        Container(
-            // height: MediaQuery.of(context).size.height * 0.1,
-            height: 110,
-            width: MediaQuery.of(context).size.width * 0.95,
-            // width: 130,
-            child: SafeArea(
-              bottom: false,
-              child: Align(
-                alignment: Alignment.bottomLeft,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 12, top: 10),
-                  // child: Text('Tamil sangam'),
-                  child: Image.asset("assets/img/tamil.png"),
-                ),
-              ),
-            )),
+        UserAccountsDrawerHeader(
+          accountName: Text(
+            'sriram',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+          ),
+          accountEmail: Text(
+            'sriram@gmail.com',
+            style: TextStyle(fontSize: 19, fontWeight: FontWeight.w400),
+          ),
+          currentAccountPicture: CircleAvatar(
+            backgroundColor: Colors.white,
+            backgroundImage: NetworkImage(
+                "https://firebasestorage.googleapis.com/v0/b/tamilsangam-4e5d3.appspot.com/o/commiteMembers%2Fimages.png?alt=media&token=41e5587a-f26f-4d60-a639-f32dddd43007"),
+          ),
+        ),
+        // Container(
+        //     // height: MediaQuery.of(context).size.height * 0.1,
+        //     height: 110,
+        //     width: MediaQuery.of(context).size.width * 0.95,
+        //     // width: 130,
+        //     child: SafeArea(
+        //       bottom: false,
+        //       child: Align(
+        //         alignment: Alignment.bottomLeft,
+        //         child: Padding(
+        //           padding: const EdgeInsets.only(left: 12, top: 10),
+        //           // child: Text('Tamil sangam'),
+        //           child: Image.asset("assets/img/tamil.png"),
+        //         ),
+        //       ),
+        //     )
+        // ),
         Expanded(
           flex: 2,
           child: ListView(
-            padding: EdgeInsets.only(top: 24, left: 16, right: 16),
+            padding: EdgeInsets.only(top: 0, left: 16, right: 16),
             children: [
               DrawerTile(
                   icon: Icons.home,
@@ -57,6 +73,9 @@ class ArgonDrawer extends StatelessWidget {
                   iconColor: ArgonColors.primary,
                   title: "Home",
                   isSelected: currentPage == "Home" ? true : false),
+              Divider(
+                height: 0.7,
+              ),
               DrawerTile(
                   icon: Icons.pie_chart,
                   onTap: () {
@@ -66,6 +85,9 @@ class ArgonDrawer extends StatelessWidget {
                   iconColor: ArgonColors.warning,
                   title: "Profile",
                   isSelected: currentPage == "Profile" ? true : false),
+              Divider(
+                height: 0.7,
+              ),
               DrawerTile(
                   icon: Icons.apps,
                   onTap: () {
@@ -75,6 +97,9 @@ class ArgonDrawer extends StatelessWidget {
                   iconColor: ArgonColors.primary,
                   title: "Commitee",
                   isSelected: currentPage == "commitee" ? true : false),
+              Divider(
+                height: 0.7,
+              ),
               DrawerTile(
                   icon: Icons.apps,
                   onTap: () {
@@ -84,6 +109,9 @@ class ArgonDrawer extends StatelessWidget {
                   iconColor: ArgonColors.primary,
                   title: "Events",
                   isSelected: currentPage == "events" ? true : false),
+              Divider(
+                height: 0.7,
+              ),
               DrawerTile(
                   icon: Icons.apps,
                   onTap: () {
@@ -97,6 +125,9 @@ class ArgonDrawer extends StatelessWidget {
                   iconColor: ArgonColors.primary,
                   title: "MemberShip Benifits",
                   isSelected: currentPage == "membership" ? true : false),
+              Divider(
+                height: 0.7,
+              ),
 
               DrawerTile(
                   icon: Icons.apps,
@@ -107,6 +138,9 @@ class ArgonDrawer extends StatelessWidget {
                   iconColor: ArgonColors.primary,
                   title: "Gallery",
                   isSelected: currentPage == "gallery" ? true : false),
+              Divider(
+                height: 0.7,
+              ),
               DrawerTile(
                   icon: Icons.apps,
                   onTap: () {
@@ -116,6 +150,9 @@ class ArgonDrawer extends StatelessWidget {
                   iconColor: ArgonColors.primary,
                   title: "About Us",
                   isSelected: currentPage == "aboutus" ? true : false),
+              Divider(
+                height: 0.7,
+              ),
               DrawerTile(
                   icon: Icons.apps,
                   onTap: () {
@@ -125,6 +162,9 @@ class ArgonDrawer extends StatelessWidget {
                   iconColor: ArgonColors.primary,
                   title: "Contact Us",
                   isSelected: currentPage == "contactus" ? true : false),
+              Divider(
+                height: 0.7,
+              ),
               // DrawerTile(
               //     icon: Icons.account_circle,
               //     onTap: () {
@@ -155,34 +195,6 @@ class ArgonDrawer extends StatelessWidget {
             ],
           ),
         ),
-        // Expanded(
-        //   flex: 1,
-        //   child: Container(
-        //       padding: EdgeInsets.only(left: 8, right: 16),
-        //       child: Column(
-        //         mainAxisAlignment: MainAxisAlignment.start,
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: [
-        //           Divider(height: 4, thickness: 0, color: ArgonColors.muted),
-        //           Padding(
-        //             padding:
-        //                 const EdgeInsets.only(top: 16.0, left: 16, bottom: 8),
-        //             child: Text("DOCUMENTATION",
-        //                 style: TextStyle(
-        //                   color: Color.fromRGBO(0, 0, 0, 0.5),
-        //                   fontSize: 15,
-        //                 )),
-        //           ),
-        //           DrawerTile(
-        //               icon: Icons.airplanemode_active,
-        //               onTap: _launchURL,
-        //               iconColor: ArgonColors.muted,
-        //               title: "Getting Started",
-        //               isSelected:
-        //                   currentPage == "Getting started" ? true : false),
-        //         ],
-        //       )),
-        // ),
       ]),
     ));
   }
