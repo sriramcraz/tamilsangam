@@ -17,6 +17,8 @@ import 'package:TamilSangam/screens/register.dart';
 import 'package:TamilSangam/screens/articles.dart';
 import 'package:TamilSangam/screens/elements.dart';
 
+import 'screens/login.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -29,10 +31,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Tamil sangam Flutter',
         theme: ThemeData(fontFamily: 'OpenSans'),
-        initialRoute: "/onboarding",
+        // initialRoute: "/onboarding",
+        initialRoute: "/login",
         debugShowCheckedModeBanner: false,
         routes: <String, WidgetBuilder>{
           "/onboarding": (BuildContext context) => new Onboarding(),
+          "/login": (BuildContext context) => new Login(),
           "/home": (BuildContext context) => new Home(),
           "/commitee": (BuildContext context) => new Commitee(),
           "/commiteeList": (BuildContext context) => new CommiteeList(),
