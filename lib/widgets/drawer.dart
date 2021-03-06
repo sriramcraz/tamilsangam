@@ -1,3 +1,4 @@
+import 'package:TamilSangam/screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -59,7 +60,9 @@ class ArgonDrawer extends StatelessWidget {
                   icon: Icons.pie_chart,
                   onTap: () {
                     if (currentPage != "Profile")
-                      Navigator.pushReplacementNamed(context, '/profile');
+                      // Navigator.pushReplacementNamed(context, '/profile');
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Profile()));
                   },
                   iconColor: ArgonColors.warning,
                   title: "Profile",
