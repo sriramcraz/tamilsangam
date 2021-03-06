@@ -35,7 +35,7 @@ class Navbar extends StatefulWidget implements PreferredSizeWidget {
       this.searchAutofocus = false,
       this.backButton = false,
       this.noShadow = false,
-      this.bgColor = ArgonColors.white,
+      this.bgColor = ArgonColors.primary,
       this.searchBar = false});
 
   final double _prefferedHeight = 60.0;
