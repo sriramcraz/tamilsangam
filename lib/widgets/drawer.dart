@@ -65,7 +65,7 @@ class ArgonDrawer extends StatelessWidget {
             padding: EdgeInsets.only(top: 0, left: 16, right: 16),
             children: [
               DrawerTile(
-                  icon: Icons.home_outlined,
+                  icon: Icons.home,
                   onTap: () {
                     if (currentPage != "Home")
                       Navigator.pushReplacementNamed(context, '/home');
@@ -89,7 +89,7 @@ class ArgonDrawer extends StatelessWidget {
               //   height: 0.7,
               // ),
               DrawerTile(
-                  icon: Icons.group_outlined,
+                  icon: Icons.group,
                   onTap: () {
                     if (currentPage != "commitee")
                       Navigator.pushReplacementNamed(context, '/commitee');
@@ -154,7 +154,7 @@ class ArgonDrawer extends StatelessWidget {
                 height: 0.7,
               ),
               DrawerTile(
-                  icon: Icons.quick_contacts_dialer_outlined,
+                  icon: Icons.contact_phone,
                   onTap: () {
                     if (currentPage != "contactus")
                       Navigator.pushReplacementNamed(context, '/contactus');

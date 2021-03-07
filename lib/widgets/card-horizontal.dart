@@ -20,7 +20,7 @@ class CardHorizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 130,
+        height: MediaQuery.of(context).size.height / 4,
         child: GestureDetector(
           onTap: tap,
           child: Card(
@@ -38,7 +38,7 @@ class CardHorizontal extends StatelessWidget {
                               bottomLeft: Radius.circular(6.0)),
                           image: DecorationImage(
                             image: NetworkImage(img),
-                            fit: BoxFit.cover,
+                            fit: BoxFit.fill,
                           ))),
                 ),
                 Flexible(
@@ -49,14 +49,23 @@ class CardHorizontal extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(title,
-                              style: TextStyle(
-                                  color: ArgonColors.header, fontSize: 13)),
-                          Text(cta,
-                              style: TextStyle(
-                                  color: ArgonColors.primary,
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w600))
+                          Flexible(
+                            child: Text(title,
+                                style: TextStyle(
+                                    color: ArgonColors.header, fontSize: 13)),
+                          ),
+                          FittedBox(
+                            child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(6)),
+                              onPressed: tap,
+                              child: Text(cta,
+                                  style: TextStyle(
+                                      color: ArgonColors.primary,
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w600)),
+                            ),
+                          )
                         ],
                       ),
                     ))

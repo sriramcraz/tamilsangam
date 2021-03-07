@@ -55,19 +55,22 @@ class _CommiteeState extends State<Commitee> {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height / 6,
             child: Card(
               color: ArgonColors.primary,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(20.0))),
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(
-                    MediaQuery.of(context).size.width / 2.2, 0, 8, 0),
-                child: Text("20",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: ArgonColors.white,
-                        fontSize: 72)),
+              child: FittedBox(
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(
+                      MediaQuery.of(context).size.width / 2, 16.5, 10, 16.5),
+                  child: Text("20",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: ArgonColors.white,
+                          fontSize: 100)),
+                ),
               ),
             ),
           ),
@@ -75,6 +78,7 @@ class _CommiteeState extends State<Commitee> {
             right: 0,
             child: Container(
               width: MediaQuery.of(context).size.width / 5,
+              height: MediaQuery.of(context).size.height / 6,
               child: Card(
                 color: ArgonColors.white,
                 elevation: 5,
@@ -82,13 +86,15 @@ class _CommiteeState extends State<Commitee> {
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(20),
                         bottomRight: Radius.circular(20))),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 22, 10, 22),
-                  child: Text("$king",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: ArgonColors.black,
-                          fontSize: 40)),
+                child: FittedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 16.5, 10, 16.5),
+                    child: Text("$king",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: ArgonColors.black,
+                            fontSize: 40)),
+                  ),
                 ),
               ),
             ),

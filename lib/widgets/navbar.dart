@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:TamilSangam/constants/Theme.dart';
 
@@ -147,13 +148,15 @@ class _NavbarState extends State<Navbar> {
                               Navigator.pushNamed(context, '/');
                             },
                             child: IconButton(
-                                icon: Icon(Icons.login_sharp,
-                                    color: !widget.transparent
-                                        ? (widget.bgColor == ArgonColors.white
-                                            ? ArgonColors.initial
-                                            : ArgonColors.white)
-                                        : ArgonColors.white,
-                                    size: 33.0),
+                                icon: FaIcon(
+                                  FontAwesomeIcons.signInAlt,
+                                  color: !widget.transparent
+                                      ? (widget.bgColor == ArgonColors.white
+                                          ? ArgonColors.initial
+                                          : ArgonColors.white)
+                                      : ArgonColors.white,
+                                  size: 25.0,
+                                ),
                                 onPressed: null),
                           ),
                         ],

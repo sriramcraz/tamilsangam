@@ -8,18 +8,6 @@ import 'package:TamilSangam/widgets/navbar.dart';
 import 'package:TamilSangam/widgets/drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-List<Item> generateItems(int numberOfItems) {
-  return List.generate(numberOfItems, (int index) {
-    return Item(
-      headerValue: 'Know your Rent',
-      // headerValue: 'Panel $index',
-      // expandedValue: 'This is item number $index',
-      expandedValue:
-          '10% off Tuesdays, Wednesdays and Thursdays Lunch and DinnerOn sale more than 25 Excludes Special Offers(Family pack, Combo, BOGO etc)',
-    );
-  });
-}
-
 class Membership extends StatefulWidget {
   // final GlobalKey _scaffoldKey = new GlobalKey();
   @override
@@ -27,8 +15,6 @@ class Membership extends StatefulWidget {
 }
 
 class _MembershipState extends State<Membership> {
-  List<Item> _data = generateItems(10);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
